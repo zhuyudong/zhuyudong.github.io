@@ -26,6 +26,22 @@ let u: undefined = undefined;
 let u: null = null;
 // 指定--strictNullChecks标记，null和undefined只能赋值给void和它们各自
 
+
+// 枚举
+enum Color { Red, Green, Blue };
+let c: Color = Color.Green;
+
+// any
+let notSure: any = 4;
+notSure = '123';
+notSure = false;
+
+let notSure: any = 4;
+notSure.ifItExists(); // okay
+notSure.toFixed(); // okay
+let prettySure: Object = 4;
+prettySure.toFixed(); // Error
+
 //never
 // 返回never的函数必须存在无法达到的终点
 function error(message: string): never {
